@@ -1,0 +1,52 @@
+{
+    "name": "silverstripe/docstation",
+    "description": "A module for viewing user docs in the CMS",
+    "type": "silverstripe-vendormodule",
+    "homepage": "http://silverstripe.org",
+    "license": "BSD-3-Clause",
+    "keywords": [
+        "silverstripe",
+        "versioned",
+        "admin"
+    ],
+    "authors": [
+        {
+            "name": "SilverStripe",
+            "homepage": "http://silverstripe.com"
+        },
+        {
+            "name": "The SilverStripe Community",
+            "homepage": "http://silverstripe.org"
+        }
+    ],
+    "require": {
+        "php": "^7.3 || ^8.0",
+        "silverstripe/admin": "^1.6",
+        "silverstripe/framework": "^4.10",
+        "silverstripe/versioned": "^1.6",
+        "silverstripe/graphql": "^4",
+        "silverstripe/vendor-plugin": "^1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "squizlabs/php_codesniffer": "^3",
+        "silverstripe/cms": "^4.6"
+    },
+    "scripts": {
+        "lint": "phpcs src/ tests/",
+        "lint-clean": "phpcbf src/ tests/"
+    },
+    "extra": {
+        "expose": [
+            "client/dist"
+        ]
+    },
+    "autoload": {
+        "psr-4": {
+            "SilverStripe\\Docstation\\": "src/",
+            "SilverStripe\\Docstation\\Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

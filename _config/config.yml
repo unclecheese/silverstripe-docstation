@@ -1,0 +1,8 @@
+---
+Name: docstation-requirements
+---
+SilverStripe\Admin\LeftAndMain:
+  extra_requirements_javascript:
+    - 'silverstripe/docstation:client/dist/js/bundle.js'
+  extra_requirements_css:
+    - 'silverstripe/docstation:client/dist/styles/bundle.css'
