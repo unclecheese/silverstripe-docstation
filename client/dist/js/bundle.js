@@ -96,7 +96,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _Injector = __webpack_require__(0);
+var _Injector = __webpack_require__(1);
 
 var _Injector2 = _interopRequireDefault(_Injector);
 
@@ -138,19 +138,19 @@ Object.defineProperty(exports, "__esModule", {
 
 var _templateObject = _taggedTemplateLiteral(['\nquery DocstationQuery($dir: String!) {\n  readDocstationDocs(dir: $dir) {\n    id\n    title\n    content\n    sort\n  }\n}\n'], ['\nquery DocstationQuery($dir: String!) {\n  readDocstationDocs(dir: $dir) {\n    id\n    title\n    content\n    sort\n  }\n}\n']);
 
-var _react = __webpack_require__(1);
+var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactApollo = __webpack_require__(4);
+var _reactApollo = __webpack_require__(3);
 
-var _graphqlTag = __webpack_require__(6);
+var _graphqlTag = __webpack_require__(2);
 
 var _graphqlTag2 = _interopRequireDefault(_graphqlTag);
 
 var _redux = __webpack_require__(5);
 
-var _Injector = __webpack_require__(0);
+var _Injector = __webpack_require__(1);
 
 var _DocstationInterface = __webpack_require__("./client/src/components/DocstationInterface.js");
 
@@ -163,10 +163,11 @@ function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defi
 var QUERY = (0, _graphqlTag2.default)(_templateObject);
 
 var Docstation = function Docstation(_ref) {
-  var Loader = _ref.Loader;
+  var Loader = _ref.Loader,
+      dir = _ref.dir;
   return _react2.default.createElement(
     _reactApollo.Query,
-    { query: QUERY, variables: { dir: 'app/docs' } },
+    { query: QUERY, variables: { dir: dir } },
     function (_ref2) {
       var data = _ref2.data,
           loading = _ref2.loading,
@@ -222,7 +223,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
 
-var _react = __webpack_require__(1);
+var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -277,7 +278,6 @@ var DocstationInterface = function DocstationInterface(_ref) {
               'button',
               {
                 title: doc.title,
-                role: 'button',
                 onClick: function onClick() {
                   return setCurrentDoc(doc);
                 }
@@ -301,19 +301,19 @@ exports.default = DocstationInterface;
 "use strict";
 
 
-var _jquery = __webpack_require__(3);
+var _jquery = __webpack_require__(6);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
-var _react = __webpack_require__(1);
+var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(2);
+var _reactDom = __webpack_require__(4);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _Injector = __webpack_require__(0);
+var _Injector = __webpack_require__(1);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -321,8 +321,8 @@ _jquery2.default.entwine('ss', function ($) {
   $('.js-injector-boot .docstation-component').entwine({
     onmatch: function onmatch() {
       var Component = (0, _Injector.loadComponent)('Docstation');
-      var props = this.data('props') || {};
-      _reactDom2.default.render(_react2.default.createElement(Component, props), this[0]);
+      var dir = this.data('dir') || 'app/docs';
+      _reactDom2.default.render(_react2.default.createElement(Component, { dir: dir }), this[0]);
     },
     onunmatch: function onunmatch() {
       _reactDom2.default.unmountComponentAtNode(this[0]);
@@ -1358,7 +1358,7 @@ module.exports = function attributesToProps(attributes) {
 /***/ "./node_modules/html-react-parser/lib/dom-to-react.js":
 /***/ (function(module, exports, __webpack_require__) {
 
-var React = __webpack_require__(1);
+var React = __webpack_require__(0);
 var attributesToProps = __webpack_require__("./node_modules/html-react-parser/lib/attributes-to-props.js");
 var utilities = __webpack_require__("./node_modules/html-react-parser/lib/utilities.js");
 
@@ -1495,7 +1495,7 @@ module.exports = domToReact;
 /***/ "./node_modules/html-react-parser/lib/utilities.js":
 /***/ (function(module, exports, __webpack_require__) {
 
-var React = __webpack_require__(1);
+var React = __webpack_require__(0);
 var styleToJS = __webpack_require__("./node_modules/style-to-js/cjs/index.js").default;
 
 /**
@@ -2812,35 +2812,35 @@ module.exports = StyleToObject;
 /***/ 0:
 /***/ (function(module, exports) {
 
-module.exports = Injector;
+module.exports = React;
 
 /***/ }),
 
 /***/ 1:
 /***/ (function(module, exports) {
 
-module.exports = React;
+module.exports = Injector;
 
 /***/ }),
 
 /***/ 2:
 /***/ (function(module, exports) {
 
-module.exports = ReactDom;
+module.exports = GraphQLTag;
 
 /***/ }),
 
 /***/ 3:
 /***/ (function(module, exports) {
 
-module.exports = jQuery;
+module.exports = ReactApollo;
 
 /***/ }),
 
 /***/ 4:
 /***/ (function(module, exports) {
 
-module.exports = ReactApollo;
+module.exports = ReactDom;
 
 /***/ }),
 
@@ -2854,7 +2854,7 @@ module.exports = Redux;
 /***/ 6:
 /***/ (function(module, exports) {
 
-module.exports = GraphQLTag;
+module.exports = jQuery;
 
 /***/ })
 

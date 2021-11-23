@@ -1,1 +1,1 @@
-<div class="docstation-component"></div>
+<div class="docstation-component" data-dir="$DocsDir"></div>

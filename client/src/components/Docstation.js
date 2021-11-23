@@ -16,8 +16,8 @@ query DocstationQuery($dir: String!) {
 }
 `;
 
-const Docstation = ({ Loader }) => (
-  <Query query={QUERY} variables={{ dir: 'app/docs' }}>
+const Docstation = ({ Loader, dir }) => (
+  <Query query={QUERY} variables={{ dir }}>
     {({ data, loading, error }) => {
       if (loading) {
         return <Loader />;

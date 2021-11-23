@@ -11,9 +11,9 @@ jQuery.entwine('ss', ($) => {
   $('.js-injector-boot .docstation-component').entwine({
     onmatch() {
       const Component = loadComponent('Docstation');
-      const props = this.data('props') || {};
+      const dir = this.data('dir') || 'app/docs';
       ReactDOM.render(
-        <Component {...props} />,
+        <Component dir={dir} />,
         this[0]
       );
     },

@@ -6,6 +6,7 @@
 /.scrutinizer.yml export-ignore
 /*.dist export-ignore
 /behat.yml export-ignore
+/images export-ignore
 
 /client/src export-ignore
 /webpack.config.js export-ignore
