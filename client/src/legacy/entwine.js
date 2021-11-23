@@ -10,7 +10,6 @@ import { loadComponent } from 'lib/Injector';
 jQuery.entwine('ss', ($) => {
   $('.js-injector-boot .docstation-component').entwine({
     onmatch() {
-      alert('hi');
       const Component = loadComponent('Docstation');
       const props = this.data('props') || {};
       ReactDOM.render(

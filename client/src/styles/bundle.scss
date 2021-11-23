@@ -1,0 +1,87 @@
+.docstation-component {
+  width: 100%;
+}
+.docstation__wrap {
+  background: #fff;
+  display: flex;
+  flex-wrap: wrap;
+}
+.docstation__doc {
+  flex-grow: 1;
+  width: 65%;
+  height: 100vh;
+  overflow: auto;
+  padding: 2rem;
+  > div {
+    max-width: 75%;
+    padding: 4rem 0;
+    margin: 0 auto;
+  }
+
+  font-size: 1.1rem;
+  line-height: 2rem;
+  p {
+    margin: 1.5rem 0;
+  }
+  h1 {
+    font-size: 2rem;
+    margin: 1rem 0;
+  }
+  h2 {
+    font-size: 1.75rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+  h4 {
+    font-size: 1.4rem;
+  }
+  h5 {
+    font-size: 1.3rem;
+  }
+}
+.docstation__nav {
+  height: 100vh;
+  min-width: 320px;
+  max-width: 30%;
+  overflow:auto;
+  border-left: 1px solid #666;
+  h3 {
+    text-transform: uppercase;
+    text-align: center;
+    background: #666;
+    color: #fff;
+    padding: 1rem;
+    margin: 0;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    li {
+      flex-grow: 1;
+      max-height: 8rem;
+      border-bottom: 1px dashed #ccc;
+      list-style: none;
+      margin: 0;
+      font-size: 1rem;
+      &.current {
+        border-left: 5px solid #aaa;
+      }
+      button {
+        background: transparent;
+        border: 0;
+        width: 100%;
+        text-align: left;
+        padding: 1rem;
+        display: block;
+        cursor: pointer;
+        &:hover {
+          background: #eee;
+        }
+      }
+    }
+  }
+
+}

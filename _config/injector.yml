@@ -1,0 +1,6 @@
+---
+Name: docstation-injector
+---
+SilverStripe\Core\Injector\Injector:
+  SilverStripe\Docstation\MarkdownProcessorInterface:
+    class: SilverStripe\Docstation\CommonMarkProcessor

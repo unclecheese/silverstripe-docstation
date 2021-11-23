@@ -1,0 +1,8 @@
+---
+Name: docstation-graphql
+---
+SilverStripe\GraphQL\Schema\Schema:
+  schemas:
+    admin:
+      src:
+        - 'silverstripe/docstation: _graphql'

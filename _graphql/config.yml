@@ -1,0 +1,2 @@
+resolvers:
+  - SilverStripe\Docstation\Resolver

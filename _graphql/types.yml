@@ -1,0 +1,6 @@
+DocstationDoc:
+  fields:
+    id: ID!
+    title: String!
+    content: String!
+    sort: Int!
