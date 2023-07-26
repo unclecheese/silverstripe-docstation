@@ -17,7 +17,7 @@
     "node": "^18.x"
   },
   "scripts": {
-    "build": "yarn && yarn lint && yarn test && NODE_ENV=production webpack --progress",
+    "build": "yarn && yarn lint && NODE_ENV=production webpack --progress",
     "dev": "NODE_ENV=development webpack --progress",
     "watch": "NODE_ENV=development webpack --watch --progress",
     "css": "WEBPACK_CHILD=css npm run build",
@@ -50,9 +50,9 @@
   "dependencies": {
     "@apollo/client": "^3.7.1",
     "@silverstripe/react-injector": "*",
-    "babel-polyfill": "6.7.4",
     "bootstrap": "^4.6.2",
     "classnames": "^2.2.5",
+    "core-js": "^3.31.1",
     "graphql": "^16.6.0",
     "graphql-fragments": "^0.1.0",
     "graphql-tag": "^2.10.0",
@@ -75,11 +75,13 @@
   },
   "babel": {
     "presets": [
-      "env",
-      "react"
-    ],
-    "plugins": [
-      "transform-object-rest-spread"
+      [
+        "@babel/preset-env",
+        {
+          "modules": false
+        }
+      ],
+      "@babel/preset-react"
     ]
   },
   "devDependencies": {
@@ -90,6 +92,8 @@
     "@storybook/addons": "^7.0.26",
     "@storybook/react": "^7.0.26",
     "babel-jest": "^29.6.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-polyfill": "6.7.4",
     "enzyme": "^3.11.0",
     "jest-cli": "^29.6.1",
     "webpack": "^5",

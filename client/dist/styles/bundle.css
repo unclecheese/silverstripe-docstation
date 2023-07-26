@@ -1,2 +1,93 @@
-.docstation-component{width:100%}.docstation__wrap{background:#fff;display:-webkit-box;display:-webkit-flex;display:flex;-webkit-flex-wrap:wrap;flex-wrap:wrap}.docstation__doc{-webkit-box-flex:1;-webkit-flex-grow:1;flex-grow:1;width:65%;height:100vh;overflow:auto;padding:2rem;font-size:1.1rem;line-height:2rem}.docstation__doc>div{max-width:75%;padding:4rem 0;margin:0 auto}.docstation__doc p{margin:1.5rem 0}.docstation__doc h1{font-size:2rem;margin:1rem 0}.docstation__doc h2{font-size:1.75rem}.docstation__doc h3{font-size:1.5rem}.docstation__doc h4{font-size:1.4rem}.docstation__doc h5{font-size:1.3rem}.docstation__nav{height:100vh;min-width:320px;max-width:30%;overflow:auto;border-left:1px solid #666}.docstation__nav h3{text-transform:uppercase;text-align:center;background:#666;color:#fff;padding:1rem;margin:0}.docstation__nav ul{margin:0;padding:0;display:-webkit-box;display:-webkit-flex;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;flex-direction:column}.docstation__nav ul li{-webkit-box-flex:1;-webkit-flex-grow:1;flex-grow:1;max-height:8rem;border-bottom:1px dashed #ccc;list-style:none;margin:0;font-size:1rem}.docstation__nav ul li.current{border-left:5px solid #aaa}.docstation__nav ul li button{background:transparent;border:0;width:100%;text-align:left;padding:1rem;display:block;cursor:pointer}.docstation__nav ul li button:hover{background:#eee}
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[0].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[0].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[0].use[4]!./client/src/styles/bundle.scss ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.docstation-component {
+  width: 100%;
+}
+
+.docstation__wrap {
+  background: #fff;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.docstation__doc {
+  flex-grow: 1;
+  width: 65%;
+  height: 100vh;
+  overflow: auto;
+  padding: 2rem;
+  font-size: 1.1rem;
+  line-height: 2rem;
+}
+.docstation__doc > div {
+  max-width: 75%;
+  padding: 4rem 0;
+  margin: 0 auto;
+}
+.docstation__doc p {
+  margin: 1.5rem 0;
+}
+.docstation__doc h1 {
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+.docstation__doc h2 {
+  font-size: 1.75rem;
+}
+.docstation__doc h3 {
+  font-size: 1.5rem;
+}
+.docstation__doc h4 {
+  font-size: 1.4rem;
+}
+.docstation__doc h5 {
+  font-size: 1.3rem;
+}
+
+.docstation__nav {
+  height: 100vh;
+  min-width: 320px;
+  max-width: 30%;
+  overflow: auto;
+  border-left: 1px solid #666;
+}
+.docstation__nav h3 {
+  text-transform: uppercase;
+  text-align: center;
+  background: #666;
+  color: #fff;
+  padding: 1rem;
+  margin: 0;
+}
+.docstation__nav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+.docstation__nav ul li {
+  flex-grow: 1;
+  max-height: 8rem;
+  border-bottom: 1px dashed #ccc;
+  list-style: none;
+  margin: 0;
+  font-size: 1rem;
+}
+.docstation__nav ul li.current {
+  border-left: 5px solid #aaa;
+}
+.docstation__nav ul li button {
+  background: transparent;
+  border: 0;
+  width: 100%;
+  text-align: left;
+  padding: 1rem;
+  display: block;
+  cursor: pointer;
+}
+.docstation__nav ul li button:hover {
+  background: #eee;
+}
+
 /*# sourceMappingURL=bundle.css.map*/
