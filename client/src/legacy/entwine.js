@@ -9,17 +9,26 @@ import { loadComponent } from 'lib/Injector';
  */
 jQuery.entwine('ss', ($) => {
   $('.js-injector-boot .docstation-component').entwine({
+    ReactRoot: null,
     onmatch() {
+      let root = this.getReactRoot();
+      if (!root) {
+        root = ReactDOM.createRoot(this[0]);
+      }
       const Component = loadComponent('Docstation');
       const dir = this.data('dir') || 'app/docs';
-      ReactDOM.render(
+      root.render(
         <Component dir={dir} />,
         this[0]
       );
     },
 
     onunmatch() {
-      ReactDOM.unmountComponentAtNode(this[0]);
+      const root = this.getReactRoot();
+      if (root) {
+        root.unmount();
+        this.setReactRoot(null);
+      }
     }
   });
 });

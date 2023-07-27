@@ -1,5 +1,6 @@
 import React from 'react';
-import { withApollo, Query } from 'react-apollo';
+import { Query } from '@apollo/client';
+import { withApollo } from '@apollo/client/react/hoc';
 import gql from 'graphql-tag';
 import { compose } from 'redux';
 import { inject } from 'lib/Injector';
