@@ -47,6 +47,7 @@ exports["default"] = void 0;
 __webpack_require__(/*! core-js/modules/es.array.sort.js */ "./node_modules/core-js/modules/es.array.sort.js");
 var _react = _interopRequireDefault(__webpack_require__(/*! react */ "react"));
 var _client = __webpack_require__(/*! @apollo/client */ "@apollo/client");
+var _hoc = __webpack_require__(/*! @apollo/client/react/hoc */ "@apollo/client/react/hoc");
 var _graphqlTag = _interopRequireDefault(__webpack_require__(/*! graphql-tag */ "graphql-tag"));
 var _redux = __webpack_require__(/*! redux */ "redux");
 var _Injector = __webpack_require__(/*! lib/Injector */ "lib/Injector");
@@ -55,6 +56,7 @@ var _templateObject;
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 var QUERY = (0, _graphqlTag["default"])(_templateObject || (_templateObject = _taggedTemplateLiteral(["\nquery DocstationQuery($dir: String!) {\n  readDocstationDocs(dir: $dir) {\n    id\n    title\n    content\n    sort\n  }\n}\n"])));
+window.console.log(QUERY);
 var Docstation = function Docstation(_ref) {
   var Loader = _ref.Loader,
     dir = _ref.dir;
@@ -88,7 +90,7 @@ var _default = (0, _redux.compose)((0, _Injector.inject)(['Loading'], function (
   };
 }, function () {
   return 'Docstation';
-}), _client.withApollo)(Docstation);
+}), _hoc.withApollo)(Docstation);
 exports["default"] = _default;
 
 /***/ }),
@@ -8385,6 +8387,17 @@ module.exports["default"] = StyleToObject; // ESM support
 
 "use strict";
 module.exports = ApolloClient;
+
+/***/ }),
+
+/***/ "@apollo/client/react/hoc":
+/*!***************************************!*\
+  !*** external "ApolloClientReactHoc" ***!
+  \***************************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = ApolloClientReactHoc;
 
 /***/ }),
 
